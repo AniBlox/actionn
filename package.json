@@ -1,0 +1,19 @@
+{
+  "name": "Ai-Hayasaka",
+  "description": "Ai Hayasaka is a simple discord bot made with discordjs/discord.js and has many fun features like anime, moderator, and even roleplay commands.",
+  "version": "1.0.0",
+  "repository": "https://github.com/JamieUwU/Ai-Hayasaka",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  },
+  "devDependencies": {
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "8.x"
+  }
+}
