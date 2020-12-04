@@ -1,0 +1,17 @@
+const { canModifyQueue } = require("../util/EvobotUtil");
+
+module.exports = {
+  name: "loop",
+  aliases: ["l"],
+  description: "Toggle music loop",
+  execute(message) {
+    const queue = message.client.queue.get(message.guild.id);
+    if (!queue) return message.reply("Sorry there was nothing playing in this server.").catch(console.error);
+    if (!canModifyQueue(message.member)) return;
+
+    // toggle from false to true and reverse
+    queue.loop = !queue.loop;
+    return queue.textChannel.send(`Loop is  ${queue.loop ? "**enabled**" : "**Disabled**"}`).catch(console.error);
+  }
+};
+
